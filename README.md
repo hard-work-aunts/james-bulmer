@@ -1,2 +1,2 @@
-james-bulmer
+James Bulmer
 ============
