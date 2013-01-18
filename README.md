@@ -40,3 +40,11 @@ Collected in 2011 and contains 5701 feautures. Structure: name, description, lat
 ### McDonalds
 
 Collected in 2007 and contains 5767 feautures. Structure: all, longitude, latitude, address, latitude, longitude. Note: data only relevant to citys
+
+## Memo's / Usefull stuff
+
+https://developers.google.com/chart/image/docs/gallery/new_map_charts?hl=nl#gcharts_series_color
+
+http://www.w3schools.com/googleAPI/default.asp
+
+http://www.businessinsider.com/the-most-popular-fast-food-restaurants-in-america-2012-7?op=1
