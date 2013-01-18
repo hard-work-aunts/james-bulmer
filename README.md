@@ -4,7 +4,6 @@ The goal of this repo will be to hopefully produce a map that shows the correlat
 
 Regards: James B
 
-
 ## Data information
 
 Some basic info on the data used such as date of collection and total number of features
@@ -12,3 +11,7 @@ Some basic info on the data used such as date of collection and total number of 
 ### Starbucks
 
 Collected in 2008 and contains 8902 feautures. Structure: latitude, city/state, longitude, location
+
+### Taco Bell
+
+Collected in 2011 and contains 2913 feautures. Structure: name, description, latitude, longitude
