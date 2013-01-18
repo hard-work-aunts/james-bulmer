@@ -6,7 +6,7 @@ Regards: James B
 
 ## Todo
 
-* Check raw data matches expected structure
+* Check that the raw data matches the expected structure
 * Create a basic Google map (or openmap) with relevant jquery plugins
 * Display all stores on the map and check for errors
 * Display population data on the map and check for errors
