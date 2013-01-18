@@ -10,7 +10,7 @@ Regards: James B
 * Create a basic Google map (or openmap) with relevant jquery plugins
 * Display all stores on the map and check for errors
 * Display population data on the map and check for errors
-* Create a better method to view data, county colour ect
+* Create a better method to view the data (county colouring, search functions ,ect)
 * Spell check every thing
 
 ## Data information
