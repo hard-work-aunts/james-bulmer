@@ -7,4 +7,8 @@ Regards: James B
 
 ## Data information
 
-1. 
+Some basic info on the data used such as date of collection and total number of features
+
+### Starbucks
+
+Collected in 2008 and contains 8902 feautures. Structure: latitude, city/state, longitude, location
