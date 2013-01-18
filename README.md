@@ -15,3 +15,7 @@ Collected in 2008 and contains 8902 feautures. Structure: latitude, city/state, 
 ### Taco Bell
 
 Collected in 2011 and contains 2913 feautures. Structure: name, description, latitude, longitude
+
+### Dunkin' Donuts
+
+Collected in 2009 and contains 1087 feautures. Structure: name, latitude, longitude. Note: data includes Canada
