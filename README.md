@@ -19,7 +19,7 @@ Some basic info on the data used,  this includes information such as date of col
 
 ### Starbucks
 
-Collected in 2008 and contains 8902 feautures. Structure: latitude, city/state, longitude, location
+Collected in 2008 and contains 11602 feautures. Structure: name, lat, address, long <-- Has been updated! 18/01/13
 
 ### Taco Bell
 
