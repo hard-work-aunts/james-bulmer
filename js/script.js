@@ -3832,4 +3832,18 @@ $(document).ready(function() {
 	
 	wyoming.setMap(map);
 	
+	// Point in polygon (Starbucks)
+	var Starbucks_CSV = 'Raw Data/starbucks.csv';
+	$.get(Starbucks_CSV, function(data) {
+		var Starbucks = $.csv.toObjects(data);
+		$.each(Starbucks, function(index, value) {
+			var location = new google.maps.LatLng(value.long, value.lat);
+			if(colorado.containsLatLng(location)) {
+				new google.maps.Marker({
+					position: location,
+					map: map
+				});
+			}
+		});
+	});
 });
