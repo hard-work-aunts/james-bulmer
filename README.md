@@ -26,7 +26,8 @@ Collected in 2011 and contains 2913 feautures. Structure: name, description, lat
 
 ### Dunkin' Donuts
 
-Collected in 2009 and contains 1087 feautures. Structure: name, latitude, longitude. Note: data includes Canada
+Collected in 2009 and contains 1087 feautures. Structure: Name,Street,City,PostalCode,Country,latitude,longitude,GPS
+Note: data includes Canada
 
 ### Pizza Hut
 
