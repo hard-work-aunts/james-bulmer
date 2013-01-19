@@ -13,6 +13,8 @@ foreach ($xml->state as $state) {
 		echo "\t\t\tnew google.maps.LatLng(" . $point->attributes() ->lat->__toString() . ", " . $point->attributes() ->lng->__toString() . "),\n";
 	}
 	echo "\t\t],\n";
+	echo "\t\tstate: '" . str_replace(' ', '_', strtolower($state->attributes() ->name)) . "', \n";
+	echo "\t\tstarbucks: 0, \n";
 	echo "\t\tfillColor: '#0099cc',\n";
 	echo "\t\tfillOpacity: 0.66,\n";
 	echo "\t\tstrokeWeight: 1,\n";
@@ -20,5 +22,7 @@ foreach ($xml->state as $state) {
 	echo "\t});\n";
 	echo "\t\n";
 	echo "\t" . str_replace(' ', '_', strtolower($state->attributes() ->name)) . ".setMap(map);\n";
+	echo "\t\n";
+	echo "\tpolygonArray.push(" . str_replace(' ', '_', strtolower($state->attributes() ->name)) . ");\n";
 	echo "\t\n";
 }

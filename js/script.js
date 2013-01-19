@@ -7,6 +7,107 @@ $(document).ready(function() {
 	};
 	
 	var map = new google.maps.Map(document.getElementById('map_canvas'),  mapOptions);
+	var polygonArray = [];
+	
+	alaska = new google.maps.Polygon({
+		paths: [
+			new google.maps.LatLng(70.0187, -141.0205),
+			new google.maps.LatLng(70.1292, -141.7291),
+			new google.maps.LatLng(70.4515, -144.8163),
+			new google.maps.LatLng(70.7471, -148.4583),
+			new google.maps.LatLng(70.7923, -151.1609),
+			new google.maps.LatLng(71.1470, -152.6221),
+			new google.maps.LatLng(71.1185, -153.9954),
+			new google.maps.LatLng(71.4307, -154.8853),
+			new google.maps.LatLng(71.5232, -156.7529),
+			new google.maps.LatLng(71.2796, -157.9449),
+			new google.maps.LatLng(71.2249, -159.6313),
+			new google.maps.LatLng(70.6363, -161.8671),
+			new google.maps.LatLng(70.0843, -163.5809),
+			new google.maps.LatLng(69.3028, -165.2399),
+			new google.maps.LatLng(69.1782, -166.8768),
+			new google.maps.LatLng(68.3344, -168.0414),
+			new google.maps.LatLng(67.6844, -165.9155),
+			new google.maps.LatLng(67.2933, -164.6082),
+			new google.maps.LatLng(66.7789, -164.0149),
+			new google.maps.LatLng(66.5810, -165.7507),
+			new google.maps.LatLng(66.2867, -167.5745),
+			new google.maps.LatLng(66.0269, -168.9862),
+			new google.maps.LatLng(65.4970, -168.9478),
+			new google.maps.LatLng(65.0420, -167.4756),
+			new google.maps.LatLng(64.3922, -167.0142),
+			new google.maps.LatLng(64.0554, -165.7343),
+			new google.maps.LatLng(64.0193, -163.2294),
+			new google.maps.LatLng(63.9615, -162.1143),
+			new google.maps.LatLng(63.6877, -163.6029),
+			new google.maps.LatLng(63.4530, -165.3717),
+			new google.maps.LatLng(62.4133, -166.3715),
+			new google.maps.LatLng(61.6534, -166.9867),
+			new google.maps.LatLng(60.8556, -166.4429),
+			new google.maps.LatLng(60.5357, -167.8381),
+			new google.maps.LatLng(59.5482, -167.7118),
+			new google.maps.LatLng(59.4115, -165.8002),
+			new google.maps.LatLng(59.3696, -164.5972),
+			new google.maps.LatLng(59.1168, -162.8558),
+			new google.maps.LatLng(58.1185, -162.5427),
+			new google.maps.LatLng(58.1359, -160.6421),
+			new google.maps.LatLng(58.0285, -159.5050),
+			new google.maps.LatLng(57.6336, -158.8953),
+			new google.maps.LatLng(56.9090, -159.9060),
+			new google.maps.LatLng(56.3926, -160.6531),
+			new google.maps.LatLng(56.2342, -161.8835),
+			new google.maps.LatLng(55.7240, -162.9822),
+			new google.maps.LatLng(55.2478, -164.3994),
+			new google.maps.LatLng(54.7753, -165.3168),
+			new google.maps.LatLng(54.1463, -167.1075),
+			new google.maps.LatLng(53.5632, -168.5852),
+			new google.maps.LatLng(53.1402, -169.9146),
+			new google.maps.LatLng(52.5964, -169.5959),
+			new google.maps.LatLng(52.9089, -168.2227),
+			new google.maps.LatLng(54.2139, -162.7734),
+			new google.maps.LatLng(54.6786, -159.1452),
+			new google.maps.LatLng(55.6567, -155.4634),
+			new google.maps.LatLng(57.3510, -152.1400),
+			new google.maps.LatLng(59.2209, -150.8203),
+			new google.maps.LatLng(59.7695, -147.4461),
+			new google.maps.LatLng(60.3521, -145.9850),
+			new google.maps.LatLng(59.8917, -144.1544),
+			new google.maps.LatLng(59.8172, -141.6811),
+			new google.maps.LatLng(59.5225, -140.5124),
+			new google.maps.LatLng(59.0292, -138.8548),
+			new google.maps.LatLng(57.9032, -136.8526),
+			new google.maps.LatLng(56.9157, -136.0725),
+			new google.maps.LatLng(56.1555, -134.9794),
+			new google.maps.LatLng(55.3237, -134.0057),
+			new google.maps.LatLng(54.6341, -133.6418),
+			new google.maps.LatLng(54.7135, -130.6261),
+			new google.maps.LatLng(55.2869, -129.9930),
+			new google.maps.LatLng(55.9869, -130.0108),
+			new google.maps.LatLng(56.1057, -130.1083),
+			new google.maps.LatLng(56.6086, -131.5887),
+			new google.maps.LatLng(57.8404, -132.8755),
+			new google.maps.LatLng(58.7276, -133.8423),
+			new google.maps.LatLng(59.3108, -134.9121),
+			new google.maps.LatLng(59.8020, -135.4724),
+			new google.maps.LatLng(59.6039, -136.3445),
+			new google.maps.LatLng(59.1619, -136.8251),
+			new google.maps.LatLng(59.2441, -137.6079),
+			new google.maps.LatLng(60.0902, -139.2119),
+			new google.maps.LatLng(60.3575, -139.0938),
+			new google.maps.LatLng(60.1866, -140.0056),
+			new google.maps.LatLng(60.3059, -140.9999),
+			new google.maps.LatLng(70.0187, -141.0205),
+		],
+		starbucks: 0, 
+		fillColor: '#0099cc',
+		fillOpacity: 0.66,
+		strokeWeight: 1,
+		clickable: true
+	});
+	
+	alaska.setMap(map);
+	
+	polygonArray.push(alaska);
 	
 	alabama = new google.maps.Polygon({
 		paths: [
@@ -32,6 +133,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(34.9479, -88.1721),
 			new google.maps.LatLng(34.9107, -88.1461),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -39,6 +141,8 @@ $(document).ready(function() {
 	});
 	
 	alabama.setMap(map);
+	
+	polygonArray.push(alabama);
 	
 	arkansas = new google.maps.Polygon({
 		paths: [
@@ -101,6 +205,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(33.4314, -94.0430),
 			new google.maps.LatLng(33.0213, -94.0430),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -108,6 +213,8 @@ $(document).ready(function() {
 	});
 	
 	arkansas.setMap(map);
+	
+	polygonArray.push(arkansas);
 	
 	arizona = new google.maps.Polygon({
 		paths: [
@@ -197,6 +304,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.3638, -114.0450),
 			new google.maps.LatLng(37.0001, -114.0508),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -204,6 +312,8 @@ $(document).ready(function() {
 	});
 	
 	arizona.setMap(map);
+	
+	polygonArray.push(arizona);
 	
 	california = new google.maps.Polygon({
 		paths: [
@@ -319,6 +429,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.7170, -124.4545),
 			new google.maps.LatLng(41.9983, -124.4009),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -326,6 +437,8 @@ $(document).ready(function() {
 	});
 	
 	california.setMap(map);
+	
+	polygonArray.push(california);
 	
 	colorado = new google.maps.Polygon({
 		paths: [
@@ -335,6 +448,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.9996, -109.0489),
 			new google.maps.LatLng(37.0004, -109.0448),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -342,6 +456,8 @@ $(document).ready(function() {
 	});
 	
 	colorado.setMap(map);
+	
+	polygonArray.push(colorado);
 	
 	connecticut = new google.maps.Polygon({
 		paths: [
@@ -378,6 +494,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.4906, -73.5329),
 			new google.maps.LatLng(42.0493, -73.4875),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -385,6 +502,8 @@ $(document).ready(function() {
 	});
 	
 	connecticut.setMap(map);
+	
+	polygonArray.push(connecticut);
 	
 	delaware = new google.maps.Polygon({
 		paths: [
@@ -408,6 +527,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.8296, -75.6477),
 			new google.maps.LatLng(39.7199, -75.7906),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -415,6 +535,8 @@ $(document).ready(function() {
 	});
 	
 	delaware.setMap(map);
+	
+	polygonArray.push(delaware);
 	
 	florida = new google.maps.Polygon({
 		paths: [
@@ -506,6 +628,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(30.9682, -87.5912),
 			new google.maps.LatLng(30.9964, -87.6050),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -513,6 +636,8 @@ $(document).ready(function() {
 	});
 	
 	florida.setMap(map);
+	
+	polygonArray.push(florida);
 	
 	georgia = new google.maps.Polygon({
 		paths: [
@@ -589,6 +714,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(34.5620, -85.5231),
 			new google.maps.LatLng(34.9929, -85.6068),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -596,6 +722,8 @@ $(document).ready(function() {
 	});
 	
 	georgia.setMap(map);
+	
+	polygonArray.push(georgia);
 	
 	hawaii = new google.maps.Polygon({
 		paths: [
@@ -630,6 +758,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(19.2048, -154.8839),
 			new google.maps.LatLng(19.5158, -154.6271),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -637,6 +766,8 @@ $(document).ready(function() {
 	});
 	
 	hawaii.setMap(map);
+	
+	polygonArray.push(hawaii);
 	
 	iowa = new google.maps.Polygon({
 		paths: [
@@ -700,6 +831,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.6775, -95.8461),
 			new google.maps.LatLng(40.5837, -95.7610),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -707,6 +839,8 @@ $(document).ready(function() {
 	});
 	
 	iowa.setMap(map);
+	
+	polygonArray.push(iowa);
 	
 	idaho = new google.maps.Polygon({
 		paths: [
@@ -834,6 +968,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(46.9451, -117.0394),
 			new google.maps.LatLng(48.9996, -117.0319),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -841,6 +976,8 @@ $(document).ready(function() {
 	});
 	
 	idaho.setMap(map);
+	
+	polygonArray.push(idaho);
 	
 	illinois = new google.maps.Polygon({
 		paths: [
@@ -915,6 +1052,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.4032, -90.5356),
 			new google.maps.LatLng(42.4843, -90.6564),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -922,6 +1060,8 @@ $(document).ready(function() {
 	});
 	
 	illinois.setMap(map);
+	
+	polygonArray.push(illinois);
 	
 	indiana = new google.maps.Polygon({
 		paths: [
@@ -1011,6 +1151,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.3492, -87.5336),
 			new google.maps.LatLng(41.7600, -87.5253),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1018,6 +1159,8 @@ $(document).ready(function() {
 	});
 	
 	indiana.setMap(map);
+	
+	polygonArray.push(indiana);
 	
 	kansas = new google.maps.Polygon({
 		paths: [
@@ -1040,6 +1183,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.0087, -95.3036),
 			new google.maps.LatLng(40.0024, -102.0506),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1047,6 +1191,8 @@ $(document).ready(function() {
 	});
 	
 	kansas.setMap(map);
+	
+	polygonArray.push(kansas);
 	
 	kentucky = new google.maps.Polygon({
 		paths: [
@@ -1131,6 +1277,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.6232, -89.3518),
 			new google.maps.LatLng(36.4986, -89.5345),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1138,6 +1285,8 @@ $(document).ready(function() {
 	});
 	
 	kentucky.setMap(map);
+	
+	polygonArray.push(kentucky);
 	
 	louisiana = new google.maps.Polygon({
 		paths: [
@@ -1251,6 +1400,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(32.7041, -94.0430),
 			new google.maps.LatLng(33.0225, -94.0430),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1258,6 +1408,8 @@ $(document).ready(function() {
 	});
 	
 	louisiana.setMap(map);
+	
+	polygonArray.push(louisiana);
 	
 	massachusetts = new google.maps.Polygon({
 		paths: [
@@ -1312,6 +1464,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.9962, -72.8160),
 			new google.maps.LatLng(42.0024, -72.7803),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1319,6 +1472,8 @@ $(document).ready(function() {
 	});
 	
 	massachusetts.setMap(map);
+	
+	polygonArray.push(massachusetts);
 	
 	maryland = new google.maps.Polygon({
 		paths: [
@@ -1433,6 +1588,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.5316, -79.4833),
 			new google.maps.LatLng(39.7214, -79.4772),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1440,6 +1596,8 @@ $(document).ready(function() {
 	});
 	
 	maryland.setMap(map);
+	
+	polygonArray.push(maryland);
 	
 	maine = new google.maps.Polygon({
 		paths: [
@@ -1500,6 +1658,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(43.5675, -70.9717),
 			new google.maps.LatLng(45.3029, -71.0829),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1507,6 +1666,8 @@ $(document).ready(function() {
 	});
 	
 	maine.setMap(map);
+	
+	polygonArray.push(maine);
 	
 	michigan = new google.maps.Polygon({
 		paths: [
@@ -1627,6 +1788,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(48.2448, -88.6761),
 			new google.maps.LatLng(48.3042, -88.3726),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1634,6 +1796,8 @@ $(document).ready(function() {
 	});
 	
 	michigan.setMap(map);
+	
+	polygonArray.push(michigan);
 	
 	minnesota = new google.maps.Polygon({
 		paths: [
@@ -1726,6 +1890,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.2961, -96.4558),
 			new google.maps.LatLng(43.5008, -96.4531),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1733,6 +1898,8 @@ $(document).ready(function() {
 	});
 	
 	minnesota.setMap(map);
+	
+	polygonArray.push(minnesota);
 	
 	missouri = new google.maps.Polygon({
 		paths: [
@@ -1802,6 +1969,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.5962, -92.5818),
 			new google.maps.LatLng(40.6140, -91.7358),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1809,6 +1977,8 @@ $(document).ready(function() {
 	});
 	
 	missouri.setMap(map);
+	
+	polygonArray.push(missouri);
 	
 	mississippi = new google.maps.Polygon({
 		paths: [
@@ -1897,6 +2067,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(34.8702, -90.2911),
 			new google.maps.LatLng(35.0041, -90.3062),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1904,6 +2075,8 @@ $(document).ready(function() {
 	});
 	
 	mississippi.setMap(map);
+	
+	polygonArray.push(mississippi);
 	
 	montana = new google.maps.Polygon({
 		paths: [
@@ -1965,6 +2138,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(44.9959, -111.0498),
 			new google.maps.LatLng(44.4750, -111.0512),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1972,6 +2146,8 @@ $(document).ready(function() {
 	});
 	
 	montana.setMap(map);
+	
+	polygonArray.push(montana);
 	
 	north_carolina = new google.maps.Polygon({
 		paths: [
@@ -2036,6 +2212,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(33.7666, -77.9260),
 			new google.maps.LatLng(33.7963, -78.4863),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2043,6 +2220,8 @@ $(document).ready(function() {
 	});
 	
 	north_carolina.setMap(map);
+	
+	polygonArray.push(north_carolina);
 	
 	north_dakota = new google.maps.Polygon({
 		paths: [
@@ -2070,6 +2249,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(48.9982, -97.2331),
 			new google.maps.LatLng(48.9946, -104.0501),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2077,6 +2257,8 @@ $(document).ready(function() {
 	});
 	
 	north_dakota.setMap(map);
+	
+	polygonArray.push(north_dakota);
 	
 	nebraska = new google.maps.Polygon({
 		paths: [
@@ -2124,6 +2306,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.9966, -98.5020),
 			new google.maps.LatLng(43.0006, -104.0543),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2131,6 +2314,8 @@ $(document).ready(function() {
 	});
 	
 	nebraska.setMap(map);
+	
+	polygonArray.push(nebraska);
 	
 	new_hampshire = new google.maps.Polygon({
 		paths: [
@@ -2242,6 +2427,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.0017, -71.5237),
 			new google.maps.LatLng(45.0163, -71.5045),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2249,6 +2435,8 @@ $(document).ready(function() {
 	});
 	
 	new_hampshire.setMap(map);
+	
+	polygonArray.push(new_hampshire);
 	
 	new_jersey = new google.maps.Polygon({
 		paths: [
@@ -2307,6 +2495,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.3469, -74.7249),
 			new google.maps.LatLng(41.3593, -74.6960),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2314,6 +2503,8 @@ $(document).ready(function() {
 	});
 	
 	new_jersey.setMap(map);
+	
+	polygonArray.push(new_jersey);
 	
 	new_mexico = new google.maps.Polygon({
 		paths: [
@@ -2327,6 +2518,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.9982, -103.0023),
 			new google.maps.LatLng(36.9982, -109.0475),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2334,6 +2526,8 @@ $(document).ready(function() {
 	});
 	
 	new_mexico.setMap(map);
+	
+	polygonArray.push(new_mexico);
 	
 	nevada = new google.maps.Polygon({
 		paths: [
@@ -2386,6 +2580,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.0000, -120.0009),
 			new google.maps.LatLng(41.9942, -119.9982),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2393,6 +2588,8 @@ $(document).ready(function() {
 	});
 	
 	nevada.setMap(map);
+	
+	polygonArray.push(nevada);
 	
 	new_york = new google.maps.Polygon({
 		paths: [
@@ -2523,6 +2720,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.1827, -79.7621),
 			new google.maps.LatLng(42.5146, -79.7621),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2530,6 +2728,8 @@ $(document).ready(function() {
 	});
 	
 	new_york.setMap(map);
+	
+	polygonArray.push(new_york);
 	
 	ohio = new google.maps.Polygon({
 		paths: [
@@ -2576,6 +2776,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(38.5782, -82.8355),
 			new google.maps.LatLng(38.3761, -82.5952),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2583,6 +2784,8 @@ $(document).ready(function() {
 	});
 	
 	ohio.setMap(map);
+	
+	polygonArray.push(ohio);
 	
 	oklahoma = new google.maps.Polygon({
 		paths: [
@@ -2634,6 +2837,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.9982, -94.6211),
 			new google.maps.LatLng(37.0004, -103.0064),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2641,6 +2845,8 @@ $(document).ready(function() {
 	});
 	
 	oklahoma.setMap(map);
+	
+	polygonArray.push(oklahoma);
 	
 	oregon = new google.maps.Polygon({
 		paths: [
@@ -2770,6 +2976,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(46.0065, -124.2554),
 			new google.maps.LatLng(46.2587, -124.2444),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2777,6 +2984,8 @@ $(document).ready(function() {
 	});
 	
 	oregon.setMap(map);
+	
+	polygonArray.push(oregon);
 	
 	pennsylvania = new google.maps.Polygon({
 		paths: [
@@ -2813,6 +3022,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.7220, -80.5243),
 			new google.maps.LatLng(42.3240, -80.5202),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2820,6 +3030,8 @@ $(document).ready(function() {
 	});
 	
 	pennsylvania.setMap(map);
+	
+	polygonArray.push(pennsylvania);
 	
 	rhode_island = new google.maps.Polygon({
 		paths: [
@@ -2844,6 +3056,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.1849, -71.7915),
 			new google.maps.LatLng(41.2665, -71.4084),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2851,6 +3064,8 @@ $(document).ready(function() {
 	});
 	
 	rhode_island.setMap(map);
+	
+	polygonArray.push(rhode_island);
 	
 	south_carolina = new google.maps.Polygon({
 		paths: [
@@ -2907,6 +3122,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(32.2012, -80.4240),
 			new google.maps.LatLng(32.0500, -80.7001),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2914,6 +3130,8 @@ $(document).ready(function() {
 	});
 	
 	south_carolina.setMap(map);
+	
+	polygonArray.push(south_carolina);
 	
 	south_dakota = new google.maps.Polygon({
 		paths: [
@@ -2944,6 +3162,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.9311, -96.5643),
 			new google.maps.LatLng(45.9416, -104.0501),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2951,6 +3170,8 @@ $(document).ready(function() {
 	});
 	
 	south_dakota.setMap(map);
+	
+	polygonArray.push(south_dakota);
 	
 	tennessee = new google.maps.Polygon({
 		paths: [
@@ -3012,6 +3233,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.4997, -88.0692),
 			new google.maps.LatLng(36.6871, -88.0637),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3019,6 +3241,8 @@ $(document).ready(function() {
 	});
 	
 	tennessee.setMap(map);
+	
+	polygonArray.push(tennessee);
 	
 	texas = new google.maps.Polygon({
 		paths: [
@@ -3194,6 +3418,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(32.0011, -103.0655),
 			new google.maps.LatLng(32.0023, -106.6168),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3201,6 +3426,8 @@ $(document).ready(function() {
 	});
 	
 	texas.setMap(map);
+	
+	polygonArray.push(texas);
 	
 	utah = new google.maps.Polygon({
 		paths: [
@@ -3212,6 +3439,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.9901, -114.0395),
 			new google.maps.LatLng(37.0015, -114.0504),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3219,6 +3447,8 @@ $(document).ready(function() {
 	});
 	
 	utah.setMap(map);
+	
+	polygonArray.push(utah);
 	
 	virginia = new google.maps.Polygon({
 		paths: [
@@ -3375,6 +3605,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.5957, -83.2654),
 			new google.maps.LatLng(36.6023, -83.6746),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3382,6 +3613,8 @@ $(document).ready(function() {
 	});
 	
 	virginia.setMap(map);
+	
+	polygonArray.push(virginia);
 	
 	vermont = new google.maps.Polygon({
 		paths: [
@@ -3492,6 +3725,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.0109, -73.3447),
 			new google.maps.LatLng(45.0104, -73.3426),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3499,6 +3733,8 @@ $(document).ready(function() {
 	});
 	
 	vermont.setMap(map);
+	
+	polygonArray.push(vermont);
 	
 	washington = new google.maps.Polygon({
 		paths: [
@@ -3626,6 +3862,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(48.8313, -123.0084),
 			new google.maps.LatLng(49.0023, -123.3215),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3633,6 +3870,8 @@ $(document).ready(function() {
 	});
 	
 	washington.setMap(map);
+	
+	polygonArray.push(washington);
 	
 	wisconsin = new google.maps.Polygon({
 		paths: [
@@ -3702,6 +3941,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.6340, -90.7031),
 			new google.maps.LatLng(42.5096, -90.6303),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3709,6 +3949,8 @@ $(document).ready(function() {
 	});
 	
 	wisconsin.setMap(map);
+	
+	polygonArray.push(wisconsin);
 	
 	west_virginia = new google.maps.Polygon({
 		paths: [
@@ -3808,6 +4050,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.7241, -80.5174),
 			new google.maps.LatLng(39.7209, -79.4778),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3815,6 +4058,8 @@ $(document).ready(function() {
 	});
 	
 	west_virginia.setMap(map);
+	
+	polygonArray.push(west_virginia);
 	
 	wyoming = new google.maps.Polygon({
 		paths: [
@@ -3824,6 +4069,7 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.9986, -111.0457),
 			new google.maps.LatLng(41.0006, -104.0556),
 		],
+		starbucks: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3832,18 +4078,24 @@ $(document).ready(function() {
 	
 	wyoming.setMap(map);
 	
+	polygonArray.push(wyoming);
+	
 	// Point in polygon (Starbucks)
 	var Starbucks_CSV = 'Raw Data/starbucks.csv';
 	$.get(Starbucks_CSV, function(data) {
 		var Starbucks = $.csv.toObjects(data);
 		$.each(Starbucks, function(index, value) {
 			var location = new google.maps.LatLng(value.long, value.lat);
-			if(colorado.containsLatLng(location)) {
-				new google.maps.Marker({
-					position: location,
-					map: map
-				});
+			for (var key in polygonArray) {
+				var obj = polygonArray[key];
+				if(obj.containsLatLng(location)) {
+					obj.starbucks++;
+					break;
+				}
 			}
 		});
 	});
+	
+	console.log(polygonArray);
+	
 });
