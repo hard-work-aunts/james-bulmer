@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	
+	var Starbucks_CSV = '/Raw Data/starbucks.csv';
+	$.get(Starbucks_CSV, function(data) {
+		var Starbucks = $.csv.toObjects(data);
+		console.log(Starbucks);
+	});
+	
 	$('#map_canvas').gmap3({
 		map:{
 			options:{
