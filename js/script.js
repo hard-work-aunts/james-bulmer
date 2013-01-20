@@ -4481,28 +4481,28 @@ $(document).ready(function() {
 		}
 	});
 	
-	// Find max baseline
-	var max;
+	// Calculate baseline
+	var baseArray = [];
 	for(var key in polygonArray) {
 		var obj = polygonArray[key];
 		var population = populationArray[key];
-		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts + obj.kfc + obj.mcdonalds + obj.tacobell);
-		if(key == 0) {
-			max = baseline;
-		}
-		if(baseline > max) {
-			max = baseline;
-		}
+		var baseline =  (obj.starbucks + obj.pizzahut + obj.dunkindonuts + obj.kfc + obj.mcdonalds + obj.tacobell) / population;
+		baseArray.push(baseline);
 	}
 	
-	// Color polygons
-	for(var key in polygonArray) {
-		var obj = polygonArray[key];
-		var population = populationArray[key];
-		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts + obj.kfc + obj.mcdonalds + obj.tacobell);
-		var alpha = (255/400) * (baseline/max);
-		obj.fillColor = '#cc0000';
-		obj.fillOpacity = alpha;
-	}
 	console.log(polygonArray);
+	var i = 255;
+	baseArray.sort(function(a,b){return b-a});
+	for(var key in baseArray) {
+		var baseline =  baseArray[key];
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(baseline == (obj.starbucks + obj.pizzahut + obj.dunkindonuts + obj.kfc + obj.mcdonalds + obj.tacobell) / populationArray[key]) {
+				obj.fillColor = "rgb(" + i + ",  0, " + (255 - i) + ")";
+				i = i - 5;
+				console.log(obj.state);
+				obj.fillOpacity = 0.8;
+			}
+		}
+	}
 });
