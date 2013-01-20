@@ -31,3 +31,7 @@ foreach ($xml->state as $state) {
 	echo "\tpolygonArray.push(" . str_replace(' ', '_', strtolower($state->attributes() ->name)) . ");\n";
 	echo "\t\n";
 }
+
+foreach ($xml->state as $state) {
+	echo "\n". str_replace(' ', '_', strtolower($state->attributes() ->name)) ."\n";
+}

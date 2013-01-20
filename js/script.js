@@ -8,6 +8,11 @@ $(document).ready(function() {
 	
 	var map = new google.maps.Map(document.getElementById('map_canvas'),  mapOptions);
 	var polygonArray = [];
+	var populationArray = [731449, 4822023, 2949131, 6553255, 38041430, 5187582, 3590347, 917092, 19317568, 9919945, 1392313,
+3074186, 1595728, 12875255, 6537334, 2885905, 4380415, 4601893, 6646144, 5884563, 1329192, 9883360, 5379139,
+6021988, 2984926, 1005141, 9752073, 699628, 1855525, 1320718, 8864590, 2085538, 2758931, 19570261, 11544225,
+3814820, 3899353, 12763536, 1050292, 4723723, 833354, 6456243, 26059203, 2855287, 8185867, 626011, 6897012,
+5726398, 1855413, 576412] ;
 
 	alaska = new google.maps.Polygon({
 		paths: [
@@ -101,6 +106,10 @@ $(document).ready(function() {
 		state: 'Alaska', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -138,6 +147,10 @@ $(document).ready(function() {
 		state: 'Alabama', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -212,6 +225,10 @@ $(document).ready(function() {
 		state: 'Arkansas', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -313,6 +330,10 @@ $(document).ready(function() {
 		state: 'Arizona', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -440,6 +461,10 @@ $(document).ready(function() {
 		state: 'California', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -461,6 +486,10 @@ $(document).ready(function() {
 		state: 'Colorado', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -509,6 +538,10 @@ $(document).ready(function() {
 		state: 'Connecticut', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -544,6 +577,10 @@ $(document).ready(function() {
 		state: 'Delaware', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -647,6 +684,10 @@ $(document).ready(function() {
 		state: 'Florida', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -735,6 +776,10 @@ $(document).ready(function() {
 		state: 'Georgia', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -781,6 +826,10 @@ $(document).ready(function() {
 		state: 'Hawaii', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -856,6 +905,10 @@ $(document).ready(function() {
 		state: 'Iowa', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -995,6 +1048,10 @@ $(document).ready(function() {
 		state: 'Idaho', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1081,6 +1138,10 @@ $(document).ready(function() {
 		state: 'Illinois', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1182,6 +1243,10 @@ $(document).ready(function() {
 		state: 'Indiana', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1216,6 +1281,10 @@ $(document).ready(function() {
 		state: 'Kansas', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1312,6 +1381,10 @@ $(document).ready(function() {
 		state: 'Kentucky', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1437,6 +1510,10 @@ $(document).ready(function() {
 		state: 'Louisiana', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1503,6 +1580,10 @@ $(document).ready(function() {
 		state: 'Massachusetts', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1629,6 +1710,10 @@ $(document).ready(function() {
 		state: 'Maryland', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1701,6 +1786,10 @@ $(document).ready(function() {
 		state: 'Maine', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1833,6 +1922,10 @@ $(document).ready(function() {
 		state: 'Michigan', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1937,6 +2030,10 @@ $(document).ready(function() {
 		state: 'Minnesota', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2018,6 +2115,10 @@ $(document).ready(function() {
 		state: 'Missouri', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2118,6 +2219,10 @@ $(document).ready(function() {
 		state: 'Mississippi', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2191,6 +2296,10 @@ $(document).ready(function() {
 		state: 'Montana', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2267,6 +2376,10 @@ $(document).ready(function() {
 		state: 'North Carolina', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2306,6 +2419,10 @@ $(document).ready(function() {
 		state: 'North Dakota', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2365,6 +2482,10 @@ $(document).ready(function() {
 		state: 'Nebraska', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2488,6 +2609,10 @@ $(document).ready(function() {
 		state: 'New Hampshire', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2558,6 +2683,10 @@ $(document).ready(function() {
 		state: 'New Jersey', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2583,6 +2712,10 @@ $(document).ready(function() {
 		state: 'New Mexico', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2647,6 +2780,10 @@ $(document).ready(function() {
 		state: 'Nevada', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2789,6 +2926,10 @@ $(document).ready(function() {
 		state: 'New York', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2847,6 +2988,10 @@ $(document).ready(function() {
 		state: 'Ohio', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2910,6 +3055,10 @@ $(document).ready(function() {
 		state: 'Oklahoma', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3051,6 +3200,10 @@ $(document).ready(function() {
 		state: 'Oregon', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3099,6 +3252,10 @@ $(document).ready(function() {
 		state: 'Pennsylvania', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3135,6 +3292,10 @@ $(document).ready(function() {
 		state: 'Rhode Island', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3203,6 +3364,10 @@ $(document).ready(function() {
 		state: 'South Carolina', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3245,6 +3410,10 @@ $(document).ready(function() {
 		state: 'South Dakota', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3318,6 +3487,10 @@ $(document).ready(function() {
 		state: 'Tennessee', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3505,6 +3678,10 @@ $(document).ready(function() {
 		state: 'Texas', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3528,6 +3705,10 @@ $(document).ready(function() {
 		state: 'Utah', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3696,6 +3877,10 @@ $(document).ready(function() {
 		state: 'Virginia', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3818,6 +4003,10 @@ $(document).ready(function() {
 		state: 'Vermont', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3957,6 +4146,10 @@ $(document).ready(function() {
 		state: 'Washington', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4038,6 +4231,10 @@ $(document).ready(function() {
 		state: 'Wisconsin', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4149,6 +4346,10 @@ $(document).ready(function() {
 		state: 'West Virginia', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4170,6 +4371,10 @@ $(document).ready(function() {
 		state: 'Wyoming', 
 		starbucks: 0, 
 		pizzahut: 0, 
+		dunkindonuts: 0, 
+		kfc: 0, 
+		mcdonalds: 0, 
+		tacobell: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4181,7 +4386,6 @@ $(document).ready(function() {
 	polygonArray.push(wyoming);
 	
 	// Point in polygon (Starbucks)
-	polygonArray.push(wyoming);
 	var stringData = $.ajax({
         url: 'Raw%20Data/starbucks.csv',
         async: false
@@ -4198,7 +4402,6 @@ $(document).ready(function() {
 	});
 	
 	// Point in polygon (Pizza Hut)
-	polygonArray.push(wyoming);
 	var stringData = $.ajax({
         url: 'Raw%20Data/pizza_hut.csv',
         async: false
@@ -4214,21 +4417,92 @@ $(document).ready(function() {
 		}
 	});
 	
+	// Point in polygon (Dunkin Donuts)
+	var stringData = $.ajax({
+        url: 'Raw%20Data/dunkin_donuts.csv',
+        async: false
+     }).responseText;
+	$.each( $.csv.toObjects(stringData), function(index, value) {
+		var location = new google.maps.LatLng(value.latitude, value.longitude);
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(obj.containsLatLng(location)) {
+				obj.dunkindonuts++;
+				break;
+			}
+		}
+	});
+	
+	// Point in polygon (KFC)
+	var stringData = $.ajax({
+        url: 'Raw%20Data/kfc.csv',
+        async: false
+     }).responseText;
+	$.each( $.csv.toObjects(stringData), function(index, value) {
+		var location = new google.maps.LatLng(value.latitude, value.longitude);
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(obj.containsLatLng(location)) {
+				obj.kfc++;
+				break;
+			}
+		}
+	});
+	
+	// Point in polygon (McDonalds)
+	var stringData = $.ajax({
+        url: 'Raw%20Data/mcdonalds.csv',
+        async: false
+     }).responseText;
+	$.each( $.csv.toObjects(stringData), function(index, value) {
+		var location = new google.maps.LatLng(value.latitude, value.longitude);
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(obj.containsLatLng(location)) {
+				obj.mcdonalds++;
+				break;
+			}
+		}
+	});
+	
+	// Point in polygon (Taco Bell)
+	var stringData = $.ajax({
+        url: 'Raw%20Data/taco_bell.csv',
+        async: false
+     }).responseText;
+	$.each( $.csv.toObjects(stringData), function(index, value) {
+		var location = new google.maps.LatLng(value.latitude, value.longitude);
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(obj.containsLatLng(location)) {
+				obj.tacobell++;
+				break;
+			}
+		}
+	});
+	
+	// Find max baseline
 	var max;
 	for(var key in polygonArray) {
 		var obj = polygonArray[key];
+		var population = populationArray[key];
+		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts);
 		if(key == 0) {
-			max = obj.starbucks;
+			max = baseline;
 		}
-		if((obj.starbucks + obj.pizzahut) > max) {
-			max = obj.starbucks;
+		if(baseline > max) {
+			max = baseline;
 		}
 	}
+	
+	// Color polygons
 	for(var key in polygonArray) {
 		var obj = polygonArray[key];
-		var alpha = (255/100) * (obj.starbucks/max);
+		var population = populationArray[key];
+		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts);
+		var alpha = (255/400) * (baseline/max);
 		obj.fillColor = '#cc0000';
 		obj.fillOpacity = alpha;
-		console.log(obj);
 	}
+	console.log(polygonArray);
 });
