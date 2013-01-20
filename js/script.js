@@ -8,7 +8,7 @@ $(document).ready(function() {
 	
 	var map = new google.maps.Map(document.getElementById('map_canvas'),  mapOptions);
 	var polygonArray = [];
-	
+
 	alaska = new google.maps.Polygon({
 		paths: [
 			new google.maps.LatLng(70.0187, -141.0205),
@@ -98,7 +98,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(60.3059, -140.9999),
 			new google.maps.LatLng(70.0187, -141.0205),
 		],
+		state: 'Alaska', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -133,7 +135,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(34.9479, -88.1721),
 			new google.maps.LatLng(34.9107, -88.1461),
 		],
+		state: 'Alabama', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -205,7 +209,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(33.4314, -94.0430),
 			new google.maps.LatLng(33.0213, -94.0430),
 		],
+		state: 'Arkansas', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -304,7 +310,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.3638, -114.0450),
 			new google.maps.LatLng(37.0001, -114.0508),
 		],
+		state: 'Arizona', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -429,7 +437,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.7170, -124.4545),
 			new google.maps.LatLng(41.9983, -124.4009),
 		],
+		state: 'California', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -448,7 +458,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.9996, -109.0489),
 			new google.maps.LatLng(37.0004, -109.0448),
 		],
+		state: 'Colorado', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -494,7 +506,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.4906, -73.5329),
 			new google.maps.LatLng(42.0493, -73.4875),
 		],
+		state: 'Connecticut', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -527,7 +541,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.8296, -75.6477),
 			new google.maps.LatLng(39.7199, -75.7906),
 		],
+		state: 'Delaware', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -628,7 +644,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(30.9682, -87.5912),
 			new google.maps.LatLng(30.9964, -87.6050),
 		],
+		state: 'Florida', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -714,7 +732,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(34.5620, -85.5231),
 			new google.maps.LatLng(34.9929, -85.6068),
 		],
+		state: 'Georgia', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -758,7 +778,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(19.2048, -154.8839),
 			new google.maps.LatLng(19.5158, -154.6271),
 		],
+		state: 'Hawaii', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -831,7 +853,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.6775, -95.8461),
 			new google.maps.LatLng(40.5837, -95.7610),
 		],
+		state: 'Iowa', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -968,7 +992,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(46.9451, -117.0394),
 			new google.maps.LatLng(48.9996, -117.0319),
 		],
+		state: 'Idaho', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1052,7 +1078,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.4032, -90.5356),
 			new google.maps.LatLng(42.4843, -90.6564),
 		],
+		state: 'Illinois', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1151,7 +1179,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.3492, -87.5336),
 			new google.maps.LatLng(41.7600, -87.5253),
 		],
+		state: 'Indiana', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1183,7 +1213,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.0087, -95.3036),
 			new google.maps.LatLng(40.0024, -102.0506),
 		],
+		state: 'Kansas', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1277,7 +1309,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.6232, -89.3518),
 			new google.maps.LatLng(36.4986, -89.5345),
 		],
+		state: 'Kentucky', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1400,7 +1434,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(32.7041, -94.0430),
 			new google.maps.LatLng(33.0225, -94.0430),
 		],
+		state: 'Louisiana', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1464,7 +1500,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.9962, -72.8160),
 			new google.maps.LatLng(42.0024, -72.7803),
 		],
+		state: 'Massachusetts', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1588,7 +1626,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.5316, -79.4833),
 			new google.maps.LatLng(39.7214, -79.4772),
 		],
+		state: 'Maryland', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1658,7 +1698,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(43.5675, -70.9717),
 			new google.maps.LatLng(45.3029, -71.0829),
 		],
+		state: 'Maine', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1788,7 +1830,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(48.2448, -88.6761),
 			new google.maps.LatLng(48.3042, -88.3726),
 		],
+		state: 'Michigan', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1890,7 +1934,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.2961, -96.4558),
 			new google.maps.LatLng(43.5008, -96.4531),
 		],
+		state: 'Minnesota', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -1969,7 +2015,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.5962, -92.5818),
 			new google.maps.LatLng(40.6140, -91.7358),
 		],
+		state: 'Missouri', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2067,7 +2115,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(34.8702, -90.2911),
 			new google.maps.LatLng(35.0041, -90.3062),
 		],
+		state: 'Mississippi', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2138,7 +2188,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(44.9959, -111.0498),
 			new google.maps.LatLng(44.4750, -111.0512),
 		],
+		state: 'Montana', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2212,7 +2264,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(33.7666, -77.9260),
 			new google.maps.LatLng(33.7963, -78.4863),
 		],
+		state: 'North Carolina', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2249,7 +2303,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(48.9982, -97.2331),
 			new google.maps.LatLng(48.9946, -104.0501),
 		],
+		state: 'North Dakota', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2306,7 +2362,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.9966, -98.5020),
 			new google.maps.LatLng(43.0006, -104.0543),
 		],
+		state: 'Nebraska', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2427,7 +2485,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.0017, -71.5237),
 			new google.maps.LatLng(45.0163, -71.5045),
 		],
+		state: 'New Hampshire', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2495,7 +2555,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.3469, -74.7249),
 			new google.maps.LatLng(41.3593, -74.6960),
 		],
+		state: 'New Jersey', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2518,7 +2580,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.9982, -103.0023),
 			new google.maps.LatLng(36.9982, -109.0475),
 		],
+		state: 'New Mexico', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2580,7 +2644,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.0000, -120.0009),
 			new google.maps.LatLng(41.9942, -119.9982),
 		],
+		state: 'Nevada', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2720,7 +2786,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.1827, -79.7621),
 			new google.maps.LatLng(42.5146, -79.7621),
 		],
+		state: 'New York', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2776,7 +2844,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(38.5782, -82.8355),
 			new google.maps.LatLng(38.3761, -82.5952),
 		],
+		state: 'Ohio', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2837,7 +2907,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.9982, -94.6211),
 			new google.maps.LatLng(37.0004, -103.0064),
 		],
+		state: 'Oklahoma', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -2976,7 +3048,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(46.0065, -124.2554),
 			new google.maps.LatLng(46.2587, -124.2444),
 		],
+		state: 'Oregon', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3022,7 +3096,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.7220, -80.5243),
 			new google.maps.LatLng(42.3240, -80.5202),
 		],
+		state: 'Pennsylvania', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3056,7 +3132,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.1849, -71.7915),
 			new google.maps.LatLng(41.2665, -71.4084),
 		],
+		state: 'Rhode Island', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3122,7 +3200,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(32.2012, -80.4240),
 			new google.maps.LatLng(32.0500, -80.7001),
 		],
+		state: 'South Carolina', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3162,7 +3242,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.9311, -96.5643),
 			new google.maps.LatLng(45.9416, -104.0501),
 		],
+		state: 'South Dakota', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3233,7 +3315,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.4997, -88.0692),
 			new google.maps.LatLng(36.6871, -88.0637),
 		],
+		state: 'Tennessee', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3418,7 +3502,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(32.0011, -103.0655),
 			new google.maps.LatLng(32.0023, -106.6168),
 		],
+		state: 'Texas', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3439,7 +3525,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(41.9901, -114.0395),
 			new google.maps.LatLng(37.0015, -114.0504),
 		],
+		state: 'Utah', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3605,7 +3693,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(36.5957, -83.2654),
 			new google.maps.LatLng(36.6023, -83.6746),
 		],
+		state: 'Virginia', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3725,7 +3815,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(45.0109, -73.3447),
 			new google.maps.LatLng(45.0104, -73.3426),
 		],
+		state: 'Vermont', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3862,7 +3954,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(48.8313, -123.0084),
 			new google.maps.LatLng(49.0023, -123.3215),
 		],
+		state: 'Washington', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -3941,7 +4035,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(42.6340, -90.7031),
 			new google.maps.LatLng(42.5096, -90.6303),
 		],
+		state: 'Wisconsin', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4050,7 +4146,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(39.7241, -80.5174),
 			new google.maps.LatLng(39.7209, -79.4778),
 		],
+		state: 'West Virginia', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4069,7 +4167,9 @@ $(document).ready(function() {
 			new google.maps.LatLng(40.9986, -111.0457),
 			new google.maps.LatLng(41.0006, -104.0556),
 		],
+		state: 'Wyoming', 
 		starbucks: 0, 
+		pizzahut: 0, 
 		fillColor: '#0099cc',
 		fillOpacity: 0.66,
 		strokeWeight: 1,
@@ -4081,21 +4181,54 @@ $(document).ready(function() {
 	polygonArray.push(wyoming);
 	
 	// Point in polygon (Starbucks)
-	var Starbucks_CSV = 'Raw Data/starbucks.csv';
-	$.get(Starbucks_CSV, function(data) {
-		var Starbucks = $.csv.toObjects(data);
-		$.each(Starbucks, function(index, value) {
-			var location = new google.maps.LatLng(value.long, value.lat);
-			for (var key in polygonArray) {
-				var obj = polygonArray[key];
-				if(obj.containsLatLng(location)) {
-					obj.starbucks++;
-					break;
-				}
+	polygonArray.push(wyoming);
+	var stringData = $.ajax({
+        url: 'Raw%20Data/starbucks.csv',
+        async: false
+     }).responseText;
+	$.each( $.csv.toObjects(stringData), function(index, value) {
+		var location = new google.maps.LatLng(value.long, value.lat);
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(obj.containsLatLng(location)) {
+				obj.starbucks++;
+				break;
 			}
-		});
+		}
 	});
 	
-	console.log(polygonArray);
+	// Point in polygon (Pizza Hut)
+	polygonArray.push(wyoming);
+	var stringData = $.ajax({
+        url: 'Raw%20Data/pizza_hut.csv',
+        async: false
+     }).responseText;
+	$.each( $.csv.toObjects(stringData), function(index, value) {
+		var location = new google.maps.LatLng(value.latitude, value.longitude);
+		for(var key in polygonArray) {
+			var obj = polygonArray[key];
+			if(obj.containsLatLng(location)) {
+				obj.pizzahut++;
+				break;
+			}
+		}
+	});
 	
+	var max;
+	for(var key in polygonArray) {
+		var obj = polygonArray[key];
+		if(key == 0) {
+			max = obj.starbucks;
+		}
+		if((obj.starbucks + obj.pizzahut) > max) {
+			max = obj.starbucks;
+		}
+	}
+	for(var key in polygonArray) {
+		var obj = polygonArray[key];
+		var alpha = (255/100) * (obj.starbucks/max);
+		obj.fillColor = '#cc0000';
+		obj.fillOpacity = alpha;
+		console.log(obj);
+	}
 });
