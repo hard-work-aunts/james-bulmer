@@ -4486,7 +4486,7 @@ $(document).ready(function() {
 	for(var key in polygonArray) {
 		var obj = polygonArray[key];
 		var population = populationArray[key];
-		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts);
+		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts + obj.kfc + obj.mcdonalds + obj.tacobell);
 		if(key == 0) {
 			max = baseline;
 		}
@@ -4499,7 +4499,7 @@ $(document).ready(function() {
 	for(var key in polygonArray) {
 		var obj = polygonArray[key];
 		var population = populationArray[key];
-		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts);
+		var baseline = population / (obj.starbucks + obj.pizzahut + obj.dunkindonuts + obj.kfc + obj.mcdonalds + obj.tacobell);
 		var alpha = (255/400) * (baseline/max);
 		obj.fillColor = '#cc0000';
 		obj.fillOpacity = alpha;
